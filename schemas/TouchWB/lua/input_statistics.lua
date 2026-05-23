@@ -14,7 +14,7 @@
 --   💾 自动保存统计数据，重启后不丢失（按方案分开存储）
 --   📈 自动保存昨日统计数据，方便与昨日进行对比
 --   ⏱️ 临时统计功能，可记录特定时间段输入情况
---   ⚡ 极速基于≥5秒输入段中最快的段速度（字/分）
+--   ⚡ 极速基于≥3秒输入段中最快的段速度（字/分）
 --   📊 均速基于总字数/总连续输入时间（字/分），仅统计持续≥3秒的段
 --   🔄 10秒间隙自动切断连续输入段，统计真实净速度
 --   💾 保存前自动备份（.bak文件）
@@ -27,7 +27,60 @@
 --   PC版（小狼毫/鼠须管）：MOBILE_MODE = false   （提示不上屏，报告可上屏）
 --   手机版（同文/小企鹅）：MOBILE_MODE = true    （所有内容都可上屏）
 
-local MOBILE_MODE = false   -- 手机用户请改为 true
+-- 自动检测是否为移动设备（智能平台检测
+local function is_mobile_device()
+    -- 首先尝试使用 rime_api 判断
+    if rime_api then
+        local dist = rime_api.get_distribution_code_name() or ""
+        local user_data_dir = rime_api.get_user_data_dir() or ""
+        local sys_dir = rime_api.get_shared_data_dir() or ""
+        
+        local lower_dist = dist:lower()
+        local lower_path = user_data_dir:lower()
+        local sys_lower_path = sys_dir:lower()
+        
+        -- 主判断：常见移动端输入法
+        if lower_dist == "trime" or
+            lower_dist == "hamster" or
+            lower_dist == "hamster3" or
+            lower_dist == "squirrel" then
+            return true
+        end
+        
+        -- 补充判断：路径中包含移动设备特征
+        if lower_path:find("/android/") or
+            lower_path:find("/mobile/") or
+            lower_path:find("/sdcard/") or
+            lower_path:find("/data/storage/") or
+            lower_path:find("/storage/emulated/") or
+            lower_path:find("applications") or
+            lower_path:find("library") then
+            return true
+        end
+        
+        if sys_lower_path:find("applications") or
+            sys_lower_path:find("library") then
+            return true
+        end
+        
+        -- 特定平台判断（Android/Linux）
+        if jit and jit.os then
+            local os_name = jit.os:lower()
+            if os_name:find("android") then
+                return true
+            end
+        end
+    end
+    
+    -- 尝试使用 os.getenv 判断 iOS 辅助判断
+    if os.getenv("HOME") and os.getenv("HOME"):find("/var/mobile/") then
+        return true
+    end
+    
+    return false
+end
+
+local MOBILE_MODE = is_mobile_device()
 
 -- 【方案配置说明】
 -- 本脚本为翻译器（含 init 初始化），需在 schema.yaml 中添加以下配置：
@@ -175,11 +228,11 @@ local function calculate_avg_speed(stat)
     return 0
 end
 
--- 更新极速（基于≥5秒的输入段速度：所有段中速度最快的那个段）
+-- 更新极速（基于≥3秒的输入段速度：所有段中速度最快的那个段）
 -- @param seg_time: 段持续时间（秒）
 -- @param seg_count: 段内字数
 local function update_fastest(stat, seg_time, seg_count)
-    if seg_time >= 5 and seg_count > 0 then
+    if seg_time >= 3 and seg_count > 0 then
         local spd = seg_count / seg_time * 60
         if spd > (stat.fastest or 0) then
             stat.fastest = spd
@@ -271,7 +324,7 @@ local function update_stats(input_length, is_segment_end, env)
 
     -- 处理段结束：将当前连续输入段的时间与字数存入各周期
     if is_segment_end == 1 then
-        local delt = avgSpdInfo.commitTime - avgSpdInfo.startTime
+        local delt = avgSpdInfo.clickTime - avgSpdInfo.startTime
         if delt > 0 and avgSpdInfo.count > 0 then
             local function add_to_stat(stat)
                 table.insert(stat.avgGaps, delt)
@@ -281,7 +334,7 @@ local function update_stats(input_length, is_segment_end, env)
             add_to_stat(input_stats.weekly)
             add_to_stat(input_stats.monthly)
             add_to_stat(input_stats.yearly)
-            -- 段结束时更新极速（基于≥5秒段速度）
+            -- 段结束时更新极速（基于≥3秒段速度）
             update_fastest(input_stats.daily, delt, avgSpdInfo.count)
             update_fastest(input_stats.weekly, delt, avgSpdInfo.count)
             update_fastest(input_stats.monthly, delt, avgSpdInfo.count)
@@ -653,7 +706,7 @@ local function translator(input, seg, env)
     -- 按键时检测连续输入段是否超时
     local timeNow = os.time()
     if timeNow - avgSpdInfo.clickTime > avgSpdInfo.gapThd then
-        if avgSpdInfo.commitTime - avgSpdInfo.startTime >= 1 and avgSpdInfo.count > 0 then
+        if avgSpdInfo.clickTime - avgSpdInfo.startTime >= 1 and avgSpdInfo.count > 0 then
             update_stats(0, 1, env)
         end
         avgSpdInfo.logSts = 0
@@ -773,7 +826,7 @@ local function init(env)
             if isVoice then
                 -- 语音输入：结算当前手打段（如果有），然后完全重置状态
                 if avgSpdInfo.logSts == 1 and avgSpdInfo.count > 0 then
-                    local delt = avgSpdInfo.commitTime - avgSpdInfo.startTime
+                    local delt = avgSpdInfo.clickTime - avgSpdInfo.startTime
                     if delt >= 1 then
                         update_stats(0, 1, env)
                     end
@@ -794,9 +847,9 @@ local function init(env)
                 avgSpdInfo.commitTime = timeNow
                 avgSpdInfo.count = input_length
             else
-                local delt = timeNow - avgSpdInfo.commitTime
+                local delt = timeNow - avgSpdInfo.clickTime
                 if delt > avgSpdInfo.gapThd then
-                    if avgSpdInfo.commitTime - avgSpdInfo.startTime >= 1 and avgSpdInfo.count > 0 then
+                    if avgSpdInfo.clickTime - avgSpdInfo.startTime >= 1 and avgSpdInfo.count > 0 then
                         update_stats(0, 1, env)
                     end
                     avgSpdInfo.startTime = timeNow
