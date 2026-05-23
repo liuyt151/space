@@ -99,9 +99,18 @@ switches:
     comment: "字符全角/半角"
 
 engine:
-  translators/+:
-    - lua_translator@*email_suffix_translator  # 显示常用邮箱后缀
-    - lua_translator@*input_statistics         # 输入统计（/tj 等）
+  translators:
+    - punct_translator
+    - lua_translator@*input_statistics         # 输入统计（优先处理）
+    - lua_translator@*english_translator
+    - table_translator
+    - lua_translator@user_coined_translator
+    - table_translator@fixed
+    - table_translator@mkst
+    - reverse_lookup_translator
+    - lua_translator@*calculator
+    - lua_translator@*schedule
+    - lua_translator@*email_suffix_translator
 # ========================================
 # ⌨️ 拼写规则配置（Speller）
 # ========================================
@@ -147,8 +156,13 @@ translator/+:
   enable_completion: true                   # 启用编码补全：允许4码匹配5码前缀
   enable_sentence: false                    # 禁用句子输入（14键不需要）
 # ========================================
-# 🔍 识别器增强：支持短码快速上屏
+# 🔍 识别器增强：支持短码快速上屏 + 统计命令
 # ========================================
-recognizer/+:
-  patterns/+:
-    short_code: "^[a-z]{1,3}$"              # 14键特有短码识别
+recognizer:
+  import_preset: default
+  patterns:
+    expression: "^=.*$"
+    mkst: "^[a-y]*`[a-y`]*$"
+    punct: "^/([0-9]0?|[A-Za-z]+)$"
+    reverse_lookup: "^z[a-z]*$"
+    short_code: "^[a-z]{1,3}$"

@@ -168,6 +168,8 @@ engine:
   translators:
     # 标点翻译器：翻译标点符号
     - punct_translator
+    # Lua翻译器：输入统计（优先处理，确保统计命令能正常显示）
+    - lua_translator@*input_statistics         # 输入统计（/tj 等）
     # Lua翻译器：英文→中文翻译器（支持英文单词翻译）
     - lua_translator@*english_translator
     # 表格翻译器：主翻译器，使用五笔码表进行翻译
@@ -185,7 +187,6 @@ engine:
     # Lua翻译器：日程翻译器（处理 /jc、/jq、/gz、/date 等命令）
     - lua_translator@*schedule                 # 日程命令（/jc 等）
     - lua_translator@*email_suffix_translator  # 显示常用邮箱后缀
-    - lua_translator@*input_statistics         # 输入统计（/tj 等）
 
 # 拼音拼写器配置（定义输入字符集和拼写规则）
 speller:
