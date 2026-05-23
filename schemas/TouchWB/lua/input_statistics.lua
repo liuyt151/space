@@ -27,7 +27,60 @@
 --   PC版（小狼毫/鼠须管）：MOBILE_MODE = false   （提示不上屏，报告可上屏）
 --   手机版（同文/小企鹅）：MOBILE_MODE = true    （所有内容都可上屏）
 
-local MOBILE_MODE = false   -- 手机用户请改为 true
+-- 自动检测是否为移动设备（智能平台检测
+local function is_mobile_device()
+    -- 首先尝试使用 rime_api 判断
+    if rime_api then
+        local dist = rime_api.get_distribution_code_name() or ""
+        local user_data_dir = rime_api.get_user_data_dir() or ""
+        local sys_dir = rime_api.get_shared_data_dir() or ""
+        
+        local lower_dist = dist:lower()
+        local lower_path = user_data_dir:lower()
+        local sys_lower_path = sys_dir:lower()
+        
+        -- 主判断：常见移动端输入法
+        if lower_dist == "trime" or
+            lower_dist == "hamster" or
+            lower_dist == "hamster3" or
+            lower_dist == "squirrel" then
+            return true
+        end
+        
+        -- 补充判断：路径中包含移动设备特征
+        if lower_path:find("/android/") or
+            lower_path:find("/mobile/") or
+            lower_path:find("/sdcard/") or
+            lower_path:find("/data/storage/") or
+            lower_path:find("/storage/emulated/") or
+            lower_path:find("applications") or
+            lower_path:find("library") then
+            return true
+        end
+        
+        if sys_lower_path:find("applications") or
+            sys_lower_path:find("library") then
+            return true
+        end
+        
+        -- 特定平台判断（Android/Linux）
+        if jit and jit.os then
+            local os_name = jit.os:lower()
+            if os_name:find("android") then
+                return true
+            end
+        end
+    end
+    
+    -- 尝试使用 os.getenv 判断 iOS 辅助判断
+    if os.getenv("HOME") and os.getenv("HOME"):find("/var/mobile/") then
+        return true
+    end
+    
+    return false
+end
+
+local MOBILE_MODE = is_mobile_device()
 
 -- 【方案配置说明】
 -- 本脚本为翻译器（含 init 初始化），需在 schema.yaml 中添加以下配置：
