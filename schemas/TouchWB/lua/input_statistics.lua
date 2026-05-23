@@ -672,22 +672,22 @@ end
 local function create_candidate(seg, content)
     -- 对于有数据的报告或手机模式，直接使用 text
     if MOBILE_MODE then
-        return Candidate("stat", seg.start, seg._end, content, "")
+        return Candidate("number", seg.start, seg._end, content, "")
     else
         -- PC 模式：空报告用 comment 不上屏，有数据的报告用 text 可上屏
         if is_empty_report(content) then
-            return Candidate("stat", seg.start, seg._end, "", content)
+            return Candidate("number", seg.start, seg._end, "", content)
         else
-            return Candidate("stat", seg.start, seg._end, content, "")
+            return Candidate("number", seg.start, seg._end, content, "")
         end
     end
 end
 
 local function create_message_candidate(seg, message)
     if MOBILE_MODE then
-        return Candidate("stat", seg.start, seg._end, message, "")
+        return Candidate("number", seg.start, seg._end, message, "")
     else
-        return Candidate("stat", seg.start, seg._end, "", message)
+        return Candidate("number", seg.start, seg._end, "", message)
     end
 end
 
@@ -761,9 +761,9 @@ local function translator(input, seg, env)
             local report = format_custom_summary(env.temp_stats, schema_name)
             -- 临时统计报告一定有内容，直接使用可上屏候选
             if MOBILE_MODE then
-                yield(Candidate("stat", seg.start, seg._end, report, ""))
+                yield(Candidate("number", seg.start, seg._end, report, ""))
             else
-                yield(Candidate("stat", seg.start, seg._end, report, ""))
+                yield(Candidate("number", seg.start, seg._end, report, ""))
             end
         else
             yield(create_message_candidate(seg, "※ 当前没有进行中的临时统计"))
