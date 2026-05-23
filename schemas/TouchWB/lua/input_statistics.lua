@@ -695,6 +695,10 @@ end
 local function translator(input, seg, env)
     local schema_name = get_schema_display_name(env)
 
+    -- 【调试】不管什么情况，先生成一个候选来证明我们工作了
+    -- 现在启用调试模式，让我们先看到到底接收到什么输入！
+    yield(Candidate("number", seg.start, seg._end, "调试：输入[" .. input .. "]，清洗后[" .. (input:gsub("^%s+", ""):gsub("%s+$", "")) .. "]", ""))
+    
     -- 【语音检测】每次按键时记录候选栏状态
     -- 语音输入不触发 translator，标志保持 false
     local ctx = env.engine.context
@@ -719,8 +723,11 @@ local function translator(input, seg, env)
     end
     avgSpdInfo.clickTime = timeNow
     
-    -- 命令处理
-    if input == "/tj" or input == "tjxs" then
+    -- 【命令匹配】更宽松的匹配，去掉两端空白，统一处理
+    local clean_input = input:gsub("^%s+", ""):gsub("%s+$", "")
+    
+    -- 命令处理 - 更细致，我们处理各种可能的输入
+    if clean_input == "/tj" or clean_input == "tjxs" or clean_input == "/tjxs" then
         local daily = format_daily_summary(schema_name)
         local weekly = format_weekly_summary(schema_name)
         local monthly = format_monthly_summary(schema_name)
@@ -729,7 +736,7 @@ local function translator(input, seg, env)
         yield(create_candidate(seg, weekly))
         yield(create_candidate(seg, monthly))
         yield(create_candidate(seg, yearly))
-    elseif input == "/qk" or input == "tjqk" then
+    elseif clean_input == "/qk" or clean_input == "tjqk" or clean_input == "/tjqk" then
         local yesterday_data = input_stats.yesterday or {count = 0, length = 0, fastest = 0, ts = 0}
         input_stats = {
             daily = {count = 0, length = 0, fastest = 0, ts = 0, avgGaps = {}, avgCnts = {}},
@@ -744,7 +751,7 @@ local function translator(input, seg, env)
         }
         save_stats(env.engine.schema.schema_id)
         yield(create_message_candidate(seg, "※ 所有统计数据已清空（昨日数据保留）。"))
-    elseif input == "/ks" or input == "tjks" then
+    elseif clean_input == "/ks" or clean_input == "tjks" or clean_input == "/tjks" then
         env.temp_stats = {
             count = 0,
             length = 0,
@@ -754,7 +761,7 @@ local function translator(input, seg, env)
             is_collecting = true
         }
         yield(create_message_candidate(seg, "📝 临时统计已开始"))
-    elseif input == "/js" or input == "tjjs" then
+    elseif clean_input == "/js" or clean_input == "tjjs" or clean_input == "/tjjs" then
         if env.temp_stats and env.temp_stats.is_collecting then
             env.temp_stats.is_collecting = false
             env.temp_stats.last_slash_time = os.time()
@@ -768,7 +775,7 @@ local function translator(input, seg, env)
         else
             yield(create_message_candidate(seg, "※ 当前没有进行中的临时统计"))
         end
-    elseif input == "/tc" or input == "tjtc" then
+    elseif clean_input == "/tc" or clean_input == "tjtc" or clean_input == "/tjtc" then
         if env.temp_stats and env.temp_stats.is_collecting then
             env.temp_stats.is_collecting = false
             env.temp_stats = nil
