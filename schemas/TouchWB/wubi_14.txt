@@ -1,0 +1,764 @@
+# Rime table
+#@/db_name	wubi_14
+#@/db_type	tabledb
+#@/rime_version	1.16.0
+#@/tick	460
+要	a	7
+某	ada	1
+项目	adggm	1
+甚至	adgxz	1
+极速	aegjs	3
+本地	agdvd	1
+想	agn	1
+或者	ajdtz	2
+棍	ajx	1
+楼	aov	1
+区分	aqqvf	1
+样	au	1
+要求	avduq	1
+要命	avqgm	1
+需要	ddavy	1
+直	dg	1
+十	dgg	1
+真	dgq	2
+超人	dgqqr	1
+超市	dgtns	1
+坏	dgu	2
+走	dgu	1
+超	dgv	2
+趣	dgvx	1
+朝	dje	1
+进行	djtdx	1
+干电池	djuvc	1
+面	dn	1
+块	dnq	2
+过	do	1
+均速	dqgj	3
+远	dqo	1
+均	dqu	1
+太	dt	1
+才	dt	2
+考虑	dtgal	4
+都	dtjv	1
+老	dtx	1
+救	dutt	1
+都出来了	dvgvl	1
+地方	dvttf	1
+动	dxl	1
+去	dxu	1
+的	e	16
+打	ea	7
+打字	eaov	1
+打字	eaovz	3
+脚本	edagb	3
+摇车	eelgc	1
+后	eg	1
+看	egd	2
+后面	egdnm	1
+助手	egets	1
+看到	eggxd	1
+掉	egj	1
+爬	egtx	1
+捍	ejd	1
+所有	endey	1
+氪	endq	1
+所以	ennty	1
+按	eov	1
+换	eq	1
+失去	eqdxq	1
+手	et	2
+手机	etanj	4
+插	etd	1
+挺	etdo	1
+拼音	euujy	1
+抬头	exudt	1
+上	g	2
+邢	gav	1
+开始	gavxs	1
+天	gdu	1
+肯定	geogd	1
+下	gg	1
+卡	ggu	1
+正常	gguoc	1
+事	gj	2
+整理	gjgjl	1
+点	gjo	2
+整个	gjqgg	1
+速度	gjtad	3
+速	gjuo	1
+现	gn	1
+再	gnd	2
+现在	gndgz	1
+现实	gnous	1
+两个	gnqgg	1
+两	gnqq	1
+还是	gujgs	3
+还	guo	2
+夹	guq	1
+互联网	gvnqw	1
+到	gx	3
+中	j	1
+时	jd	3
+里	jdd	3
+时段	jdqdd	2
+时间	jdujj	2
+时隔	jdvgg	1
+跑	jgq	1
+中间	jgujj	1
+跟	jgv	1
+电动	jndxd	1
+电脑	jnetn	1
+遇到	jngxd	1
+啥	jqdj	1
+晚上	jqggs	1
+咋	jtgd	1
+影响	jtjtx	1
+吃	jtn	1
+啊	jv	4
+最	jv	1
+最后	jvegh	1
+哪些	jvgxx	2
+哪里	jvjdl	1
+哪个	jvqgg	2
+吧	jx	2
+吗	jxg	4
+转向	ldtnx	1
+默认	ldtqr	1
+辆	lgnq	1
+加	lj	1
+逻辑	lqljj	2
+输入	lqttr	2
+办法	lqudf	1
+快	nnq	1
+内	nq	2
+刚	nqj	1
+几	nt	2
+改进	ntdjj	2
+敢	nv	1
+这	o	21
+宽敞	oaunc	1
+完事	odgjs	1
+豁口	odjjk	2
+粘	ogj	1
+写	ogn	2
+之	oo	1
+空	oqa	1
+空闲	oquax	1
+祖国	otlgg	1
+补	oug	1
+字	ov	8
+字数	ovovs	2
+人	q	3
+会	qd	3
+什么	qdtxm	4
+个	qg	20
+合理	qggjl	4
+盒	qgjl	1
+修改	qgntg	1
+例子	qgvvz	1
+但是	qjjgs	1
+够	qjqq	1
+你	qq	3
+作用	qtety	2
+傻逼	qtgjb	1
+停顿	qtgvd	1
+仪容	qtoqr	1
+信息	qttgx	1
+任意	qtujy	1
+留	qtvl	1
+他	qv	1
+分析	qvaex	1
+分别	qvjlb	1
+分钟	qvqjz	4
+长度	tatad	1
+行	td	4
+讲	tdj	1
+毛	tdn	1
+先	tdq	1
+计算	tdtgs	1
+短语	tdtgy	2
+船	tenj	1
+般	tenx	1
+自	tg	1
+自动	tgdxd	1
+版	tggx	2
+自己	tgnnj	2
+语音	tgujy	3
+变成	todnc	1
+谁	tqtg	1
+方面	ttdnm	2
+方案	ttova	1
+文件	ttqej	1
+访问	ttujw	1
+就	tu	4
+秒	tu	1
+说	tu	4
+简直	tudgz	1
+科技	tuedj	1
+就是	tujgs	2
+就行	tutdx	1
+应该	tuttg	1
+离	tv	1
+郞	tvev	1
+么	tx	5
+不	u	10
+新	uae	1
+头	udu	1
+着陆	udvdl	1
+美中不足	ujgjz	1
+问题	ujjgt	1
+部署	ujlds	4
+总	ujn	1
+总之	ujooz	1
+没	un	5
+没有	undey	3
+飒爽	undqs	1
+油车	unlgc	1
+觉得	uotjd	2
+次	uqq	1
+洗	utd	1
+活跃	utjgy	1
+注意	utujy	1
+游戏	utxax	1
+水	uu	1
+冰箱	uutax	1
+当日	uvjjr	2
+了	v	8
+随	vde	1
+那	vdv	3
+如果	vjjag	1
+如何	vjqah	1
+也是	vnjgs	1
+也得	vntjd	1
+好	vv	3
+又	x	1
+骑	xda	1
+骑士	xddgs	1
+结果	xdjag	1
+续建	xdvdj	1
+能	xe	5
+通过	xedog	1
+能力	xeltl	1
+引号	xgjgh	1
+马	xn	1
+马上	xnggs	1
+难	xqt	1
+缠	xtj	1
+统计	xttdj	13
+编程	xttjc	1
+又	xxx	5
+棍有朝	encaddj	0
+某个	encadqg	0
+棍有朝	encaedj	0
+样毛	encautd	0
+想关关不	encauug	0
+想关关不	encauuu	0
+在臧碍趣	encdddd	0
+臧碍趣	encdddg	0
+大龙虾这	encddjo	0
+大龙虾这	encddjt	0
+坏超人	encddq	0
+套盒	encddqg	0
+坏超人	encddqq	0
+动过就是	encddtj	0
+大厂么	encddtx	0
+有朝	encdedj	0
+有人	encdeq	0
+有人	encdeqq	0
+有你	encdeqq	0
+走换了	encdev	0
+走换了两	encdevg	0
+走换了	encdevn	0
+均速都	encdgdt	0
+坏的	encdge	0
+坏的	encdgeq	0
+走换	encdgeq	0
+直事	encdggj	0
+均速这	encdgo	0
+真这	encdgo	0
+均速这么	encdgot	0
+均速这	encdgto	0
+真这	encdgto	0
+均速这么	encdgtt	0
+厂么	encdgtx	0
+均速总	encdguj	0
+在好	encdgvv	0
+在马	encdgxn	0
+真难	encdgxq	0
+碍趣	encdjdg	0
+有电不走	encdjgd	0
+有电不	encdjgu	0
+龙虾这	encdjo	0
+龙虾这里	encdjoj	0
+龙虾这里	encdjtj	0
+龙虾这	encdjto	0
+有电不	encdju	0
+有电不走	encdjud	0
+真这么	encdotx	0
+均速	encdqgj	0
+远点	encdqgj	0
+套盒里	encdqjd	0
+有人说想	encdqta	0
+有你说要	encdqta	0
+有人说	encdqtu	0
+有你说	encdqtu	0
+过就是	encdtj	0
+过就是	encdtjg	0
+过就是刚	encdtjn	0
+才这	encdto	0
+才这	encdtto	0
+真这么	encdttx	0
+有问题	encdujg	0
+有问题这	encdujo	0
+有问题这	encdujt	0
+三北旬棍	encduqa	0
+才注意到	encduug	0
+才注意	encduuj	0
+在好的	encdve	0
+在好的	encdveq	0
+面奶还要	encdvga	0
+面奶还	encdvgu	0
+在好	encdvv	0
+去超	encdxdg	0
+动过	encdxdo	0
+在马	encdxn	0
+真难写	encdxog	0
+真难写啊	encdxoj	0
+打字	enceaov	0
+插直事	encedgj	0
+有朝	encedj	0
+手打还是	enceegj	0
+手打字	enceeov	0
+月就	enceetu	0
+助手能	enceexe	0
+爬楼	encegao	0
+后的	encege	0
+看看	encegeg	0
+后的	encegeq	0
+打还是	encegj	0
+打还是	encegjg	0
+用不了	encegv	0
+用不了	encegvn	0
+的是用不	encejeg	0
+的是用不	encejeu	0
+有电不走	encejgd	0
+有电不	encejgu	0
+的啊先	encejtd	0
+的啊先缠	encejtx	0
+有电不	enceju	0
+有电不走	encejud	0
+的啊	encejv	0
+的是骑	encejxd	0
+按这	enceoo	0
+按这个	enceoqg	0
+按这	enceoto	0
+有人	enceq	0
+掉我才	enceqdt	0
+用锯的	enceqe	0
+用锯的啊	enceqej	0
+用锯的	enceqeq	0
+的啊	enceqjv	0
+有人	enceqq	0
+有你	enceqq	0
+有人说想	enceqta	0
+有人说	enceqtu	0
+有你说	enceqtu	0
+的任意	encequj	0
+换了	enceqv	0
+换了	enceqvn	0
+的能	enceqxe	0
+插直	encetdg	0
+掉我才	encetdt	0
+用的	encete	0
+手打	encetea	0
+用的	enceteq	0
+打第一个	encetgq	0
+用不	encetgu	0
+按这个	encetqg	0
+月就	encetu	0
+用不	encetu	0
+用语音	encetuj	0
+挺好	encetvv	0
+有问题	enceujg	0
+有问题这	enceujo	0
+有问题这	enceujt	0
+用不了	enceuv	0
+用不了	enceuvn	0
+换了两辆	encevgl	0
+换了两	encevgn	0
+挺好么	encevtx	0
+的能	encexe	0
+一样毛	encgatd	0
+一样	encgau	0
+天捍	encgdej	0
+不走换	encgdeq	0
+不走换了	encgdev	0
+现在这	encgdo	0
+现在这个	encgdoq	0
+现在这	encgdto	0
+现在这个	encgdtq	0
+上用的	encgee	0
+来看看	encgeeg	0
+上用的	encgeeq	0
+不掉我才	encgeqd	0
+不掉我才	encgetd	0
+一用语音	encgetu	0
+不挺好么	encgevt	0
+不挺好	encgevv	0
+一样	encggau	0
+到来看看	encggee	0
+到来看	encggeg	0
+一下	encggg	0
+一下	encgggg	0
+一空	encggoq	0
+一般	encggte	0
+整理自己	encggtn	0
+不影响	encgjjt	0
+还是语音	encgjtu	0
+王昭君天	encgjvg	0
+事能	encgjxe	0
+上屏的	encgne	0
+上屏的	encgneq	0
+两辆	encgnlg	0
+再补	encgnou	0
+还敢说他	encgntq	0
+还敢说	encgntu	0
+来看	encgoeg	0
+再补点	encgogj	0
+一空	encgoq	0
+一空行	encgotd	0
+来讲	encgotd	0
+不会坏	encgqdg	0
+现我的	encgqe	0
+现我的	encgqeq	0
+不错会	encgqqd	0
+卡多行	encgqtd	0
+一般	encgte	0
+现我的	encgte	0
+现我的	encgteq	0
+来讲应该	encgttt	0
+五笔又	encgtx	0
+五笔又要	encgtxa	0
+五笔又	encgtxx	0
+还要	encgua	0
+还要	encguav	0
+不走	encgudg	0
+夹的	encgue	0
+不掉	encgueg	0
+夹的	encgueq	0
+不挺	encguet	0
+还敢	encgunv	0
+不会	encguqd	0
+不够	encguqj	0
+不了	encguv	0
+不了	encguvn	0
+事能救	encgxdu	0
+是真	encjdg	0
+时内	encjdnq	0
+是真难写	encjdxo	0
+是真难	encjdxq	0
+是用不	encjegu	0
+是用不了	encjegv	0
+中打字	encjeov	0
+是用不	encjeu	0
+是用不了	encjeuv	0
+电不走换	encjgde	0
+是真	encjgdg	0
+电不走	encjgdg	0
+是骑	encjgxd	0
+是电车就	encjjlt	0
+电车就	encjltu	0
+电车就好	encjltv	0
+电不	encjngu	0
+电不	encjnu	0
+时内减去	encjnud	0
+跑火车了	encjolv	0
+最多的	encjqe	0
+最多的	encjqeq	0
+吃啥	encjtjq	0
+里短语	encjttg	0
+里短语没	encjttu	0
+啊先缠	encjtxt	0
+电不走换	encjude	0
+电不走	encjudg	0
+啊先	encjvtd	0
+啊那没事	encjvug	0
+啊那没	encjvun	0
+啊那	encjvvd	0
+啊又	encjvx	0
+啊又	encjvxx	0
+啊又要	encjxa	0
+啊又要	encjxav	0
+是骑	encjxd	0
+吗时	encjxjd	0
+车用锯的	encleqe	0
+加一空	enclgoq	0
+加一空行	enclgot	0
+刚爬楼	encneao	0
+内的任意	encnequ	0
+发现我的	encngqe	0
+发现我的	encngte	0
+快了	encnnv	0
+快了	encnnvn	0
+内的	encnqe	0
+刚爬	encnqeg	0
+内的	encnqeq	0
+几十	encntdg	0
+发现	encntgn	0
+敢说他的	encntqe	0
+敢说他	encntqv	0
+内减去超	encnudd	0
+内减去	encnudx	0
+屏的	encnue	0
+屏的	encnueq	0
+快了这	encnvo	0
+快了这个	encnvoq	0
+快了这	encnvto	0
+快了这个	encnvtq	0
+敢说	encnvtu	0
+写的能	encoexe	0
+写的	encoge	0
+写的	encogeq	0
+这不挺	encoget	0
+这不挺好	encogev	0
+写啊	encogjv	0
+这不	encogu	0
+这里	encojd	0
+这里短语	encojtt	0
+写啊又	encojx	0
+写啊又要	encojxa	0
+写啊又	encojxx	0
+火车了	encolv	0
+火车了	encolvn	0
+这个套盒	encoqdq	0
+这个	encoqg	0
+这个不	encoqgu	0
+空行	encoqtd	0
+这个不	encoqu	0
+这个随	encoqvd	0
+这个随你	encoqvq	0
+这么快	encotnn	0
+这么快了	encotnv	0
+这么	encotx	0
+这不	encou	0
+之间某	encouad	0
+之间某个	encouaq	0
+这不挺	encouet	0
+这不挺好	encouev	0
+补点	encougj	0
+字到	encovgx	0
+字了	encovv	0
+字那	encovvd	0
+字了	encovvn	0
+这能	encoxe	0
+这能跑	encoxjg	0
+旬棍有朝	encqadd	0
+旬棍有朝	encqaed	0
+错会	encqaqd	0
+会坏	encqddg	0
+会坏超人	encqddq	0
+个套盒	encqdqg	0
+个套盒里	encqdqj	0
+我才	encqdt	0
+我才注意	encqduu	0
+我的	encqe	0
+锯的啊先	encqejt	0
+锯的啊	encqejv	0
+我的	encqeq	0
+个月就	encqetu	0
+个不	encqggu	0
+盒里	encqgjd	0
+个字	encqgov	0
+个不	encqgu	0
+个随	encqgvd	0
+旬棍	encqjaj	0
+锯的	encqne	0
+锯的	encqneq	0
+我这	encqo	0
+个字到	encqogx	0
+我这里	encqojd	0
+个字了	encqov	0
+仪容了	encqov	0
+个字那	encqovd	0
+个字了	encqovn	0
+仪容了	encqovn	0
+多的	encqqe	0
+多的	encqqeq	0
+你吧	encqqjx	0
+多行	encqqtd	0
+人说	encqqtu	0
+你说	encqqtu	0
+你说要	encqta	0
+信息要	encqta	0
+人说想	encqtag	0
+你说要	encqtav	0
+信息要	encqtav	0
+我这里	encqtjd	0
+我这	encqto	0
+人说	encqtu	0
+我没动过	encqudd	0
+我没动	encqudx	0
+我没	encqun	0
+他的	encqve	0
+他的	encqveq	0
+个随你吧	encqvqj	0
+个随你	encqvqq	0
+和坏的	enctde	0
+和坏的	enctdeq	0
+和坏	enctdg	0
+离远点	enctdgj	0
+我才注意	enctduu	0
+先缠	enctdxt	0
+我才	enctedt	0
+船老	enctedt	0
+我的	enctee	0
+我的	encteeq	0
+我这	encteo	0
+我这	encteto	0
+我没	encteun	0
+这不挺	enctget	0
+这不挺好	enctgev	0
+第一个	enctgqg	0
+第一个字	enctgqo	0
+第一次打	enctgue	0
+第一次	enctguq	0
+版能	enctgxe	0
+和坏	enctjdg	0
+就是刚爬	enctjne	0
+就是刚	enctjnq	0
+这里短语	enctjtt	0
+自己仪容	enctnqo	0
+么快了	enctnv	0
+么快了	enctnvn	0
+么快了这	enctnvo	0
+么快了这	enctnvt	0
+谁写的	enctoe	0
+谁写的	enctoeq	0
+谁写的能	enctoex	0
+这不	enctogu	0
+我这里	enctojd	0
+这里	enctojd	0
+这个	enctoqg	0
+这么	enctotx	0
+这不	enctou	0
+这能	enctoxe	0
+这个套盒	enctqdq	0
+说他的	enctqe	0
+说他的	enctqeq	0
+这个不	enctqgu	0
+谁写	enctqog	0
+这个不	enctqu	0
+这个随	enctqvd	0
+这个随你	enctqvq	0
+应该不	encttgu	0
+说第一次	encttgu	0
+我这里	encttjd	0
+这么快	encttnn	0
+这么快了	encttnv	0
+讲应该不	enctttg	0
+讲应该	enctttt	0
+讲应该不	enctttu	0
+应该不	encttu	0
+短语没	encttun	0
+说要	enctua	0
+说想	enctuag	0
+说要	enctuav	0
+我没动过	enctudd	0
+我没动	enctudx	0
+这不挺	enctuet	0
+这不挺好	enctuev	0
+语音这	enctuo	0
+语音这个	enctuoq	0
+箭人	enctuq	0
+箭人	enctuqq	0
+说他	enctuqv	0
+语音这	enctuto	0
+语音这个	enctutq	0
+就好	enctuvv	0
+离远	enctvdq	0
+这能跑	enctxjg	0
+么快	enctxnn	0
+版能访问	enctxtu	0
+间某个	encuaqg	0
+减去超	encuddg	0
+没动过	encuddo	0
+减去	encuddx	0
+不走换	encudeq	0
+不走换了	encudev	0
+不走	encudg	0
+关不	encudgu	0
+头时	encudjd	0
+关不	encudu	0
+洗面奶还	encudvg	0
+不掉	encueg	0
+不掉我才	encueqd	0
+不挺	encuet	0
+不掉我才	encuetd	0
+不挺好么	encuevt	0
+不挺好	encuevv	0
+关不掉	encugeg	0
+没事能救	encugxd	0
+没事能	encugxe	0
+间某	encujad	0
+不影响	encujjt	0
+问题这	encujo	0
+问题这个	encujoq	0
+问题这	encujto	0
+问题这个	encujtq	0
+没办法	enculud	0
+没动	encundx	0
+没事	encungj	0
+不会	encuqd	0
+不会坏	encuqdg	0
+次打	encuqea	0
+不够	encuqj	0
+不错会	encuqqd	0
+水行	encutd	0
+洗面	encutdn	0
+关不掉	encuueg	0
+关关不掉	encuuge	0
+关关不	encuugu	0
+注意到	encuugx	0
+水行	encuutd	0
+关关不	encuuu	0
+关关不掉	encuuue	0
+不了	encuv	0
+不了	encuvn	0
+那你	encvdqq	0
+随你	encvdqq	0
+那没	encvdun	0
+奶还	encvegu	0
+奶还要	encvga	0
+奶还要	encvgav	0
+了两辆	encvglg	0
+了两	encvgn	0
+发现	encvgn	0
+了两	encvngn	0
+了这	encvno	0
+了这	encvnto	0
+刀郞	encvntv	0
+了这	encvo	0
+了这个	encvoqg	0
+随你吧	encvqjx	0
+了这	encvto	0
+了这个	encvtqg	0
+那没事	encvugj	0
+那没事能	encvugx	0
+好的	encvve	0
+好的	encvveq	0
+了刀郞	encvvtv	0
+好么	encvvtx	0
+又要	encxa	0
+又要	encxav	0
+又打	encxea	0
+能救	encxedu	0
+能跑	encxejg	0
+难写啊	encxojv	0
+难写啊又	encxojx	0
+难写	encxqog	0
+能访问	encxtuj	0
+又要	encxxa	0
+又要	encxxav	0
+又打	encxxea	0
+丝线留	encxxqt	0
+缠丝线留	encxxxq	0

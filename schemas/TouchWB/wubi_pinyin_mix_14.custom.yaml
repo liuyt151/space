@@ -1,0 +1,9 @@
+patch:
+  custom_phrase/db_class: stabledb
+  custom_phrase/dictionary: ""
+  custom_phrase/enable_completion: false
+  custom_phrase/enable_sentence: false
+  custom_phrase/initial_quality: 1.200000
+  custom_phrase/user_dict: custom_phrase
+  engine/translators/+:
+    - table_translator@custom_phrase
